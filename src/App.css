@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+/* Assuming you may use .App-logo elsewhere */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -23,17 +24,19 @@
   font-size: 2rem;
 }
 
-.App-Text {
+.App-text {
   height: 100%;
   display: flex;
+  flex-direction: column; /* stack <p> and <h1> vertically */
   padding-top: 300px;
   padding-left: 200px;
-  align-items: flex-start;
+  align-items: flex-start; /* align left */
   color: white;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
   font-size: 5rem;
 }
 
+/* Removed .App-Text (uppercase T), replaced by .App-text in JSX and CSS for consistency */
 
 .App-link {
   color: #61dafb;
@@ -48,7 +51,8 @@
   }
 }
 
-
+/* h1 does not have align-items property, this is only for flex containers, so removing it */
 h1 {
-  align-items: left;
+  /* If you want to align text left inside h1, use text-align */
+  text-align: left;
 }

@@ -15,7 +15,7 @@ function App() {
       }}
     >
       <header className="App-Text">
-        <p>Hello<br></br></p>
+        <p>Hello</p>
         <h1>I'm Jenel</h1>    
       </header>
     </div>
