@@ -1,0 +1,56 @@
+.Header-header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  font-size: calc(7px + 2vmin);
+  padding-left: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: Bold;
+  text-shadow: 2px 2px #000000;
+  color: rgb(255, 255, 255);
+  opacity: 0.7;
+}
+
+.Footer-header {
+  background-color: #282c34;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.menu-item b {
+  padding: 15px 15px;
+  padding-right: 1000px;
+  display: block;  /* make the whole link area clickable */
+}
