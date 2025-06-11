@@ -1,5 +1,7 @@
-import './H&F.css';
-import BG from './Images/Jenel1.jpg';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Header.css';
+import BG from './Images/Jenel2.jpg';
 
 function Header() {
   return (
@@ -12,19 +14,19 @@ function Header() {
         <nav className="header-menu" aria-label="Main navigation">
           <ul className="menu-list">
             <li className="menu-item">
-              <b>Jenel</b>
+              <Link to="/">Jenel</Link>
             </li>
             <li className="menu-item">
-              <a href="#home">Home</a>
+              <Link to="/about">About Me</Link>
             </li>
             <li className="menu-item">
-              <a href="#about">About</a>
+              <Link to="/projects">Projects</Link>
             </li>
             <li className="menu-item">
-              <a href="#services">Services</a>
+              <Link to="/skills">Skills</Link>
             </li>
             <li className="menu-item">
-              <a href="#contact">Contact</a>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </nav>

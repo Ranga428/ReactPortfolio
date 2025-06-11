@@ -1,100 +1,91 @@
+/* App container with full screen background */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 10s linear;
-  }
-}
-
-.App-header {
-  height: 100%;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
-  font-size: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.App-text {
-  height: 100%;
+.App1 {
+  height: 100vh;
+  width: 100%;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
   display: flex;
-  flex-direction: column; /* stack <p> and <h1> vertically */
-  padding-top: 300px;
-  padding-left: 200px;
-  align-items: flex-start; /* align left */
-  color: white;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
-  font-size: 5rem;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Removed .App-Text (uppercase T), replaced by .App-text in JSX and CSS for consistency */
+/* Dark overlay to enhance text readability */
+.overlay {
 
-.App-link {
-  color: #61dafb;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* h1 does not have align-items property, this is only for flex containers, so removing it */
-h1 {
-  text-align: left;
-}
-
+/* Text container styling */
 .text-container {
-  color:rgb(223, 178, 82);
-  display:grid;
-  flex-flow: column wrap;
-  padding-left: 10px;
-
+  text-align: left;
+  color: #fff;
+  max-width: 700px;
+  display: grid;
+  font-size: 3rem;
 }
 
+/* Main title text */
 .text-main {
-  display:flex;
-  justify-content: flex-start;
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: 800;
-  text-shadow:5px 10px 10px rgba(0, 0, 0, 0.5);
-  background-image: linear-gradient(to bottom, #ebcd48, #0865f0);
+  margin-bottom: 10px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(45deg, #093375, #c2e9fb);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
-  opacity: 100%;
-
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-.sub-gradient-text {
-    display:flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
+/* Sub text with slight gradient */
+.sub-gradient-text p{
+  font-size: 1.5rem;
+  font-weight: 5000;
+  line-height: 1.6;
+  margin: 5px 0;
+  background: linear-gradient(90deg, #ffffff, #d1d1d1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(45deg, #a1c4fd, #c2e9fb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive text sizing */
+@media (max-width: 768px) {
+  .text-main {
+    font-size: 2.2rem;
+  }
+
+  .sub-gradient-text p {
     font-size: 1rem;
-    font-weight: bold;
-    background-image: linear-gradient(45deg, #a1c4fd, #c2e9fb);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-}
-
-html, body {
-  height: 100%; /* Makes them take full viewport height */
-  margin: 0;   /* Remove default body margin */
-  padding: 0;  /* Remove default body padding */
+  }
 }

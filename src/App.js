@@ -1,36 +1,20 @@
-import BG from './Images/Jenel2.jpg';
-import './App.css';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Home from './Home';
+import AboutMe from './AboutMe';
+import Projects from './Projects';
+import Skills from './Skills';
+import Contact from './Contact';
 
 function App() {
   return (
-    <div
-      className="App"
-      style={{
-        backgroundImage: `url(${BG})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        paddingTop: '50px',
-        maxHeight: '100%',
-        minHeight: '50%',
-        width: '100%',   // Takes full width of its parent
-        display: 'flex', // Example: for centering content over the image
-        justifyContent: 'center',
-        alignItems: 'center',
-        color: 'white',
-        textShadow: '2px 2px 4px rgba(0,0,0,0.7)'
-      }}
-    >
-      <div class="text-container">
-          <div class="text-main">Hello</div>
-          <div class="text-main">I'm Jenel</div>
-          <div class="sub-gradient-text">
-            <p> A computer engineer, I'm not just a problem-solver; </p>
-            <p> I'm an architect of innovation. I thrive on transforming </p>
-            <p> complex challenges into elegant, efficient digital solutions. </p>
-          </div>
-      </div>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<AboutMe />} />
+      <Route path="/projects" element={<Projects />} />
+      <Route path="/skills" element={<Skills />} />
+      <Route path="/contact" element={<Contact />} />
+    </Routes>
   );
 }
 

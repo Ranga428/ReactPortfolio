@@ -1,0 +1,61 @@
+.Header-header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: row; /* horizontal menu */
+  align-items: center; /* vertical center */
+  justify-content: center;
+  font-size: calc(7px + 2vmin);
+  padding-left: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold; /* corrected from invalid font-style: Bold */
+  text-shadow: 2px 2px #000000;
+  color: rgb(255, 255, 255);
+  opacity: 0.9;
+}
+
+.Header {
+  background-repeat: no-repeat;
+}
+
+ul.menu-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 10;
+  overflow: hidden;
+  background-color: #282c34;
+  display: flex; /* flexbox for horizontal menu */
+}
+
+.menu-item {
+  /* removed float (not needed with flexbox) */
+  /* add margin for spacing if needed */
+  margin-right: 150px; /* optional spacing between menu items */
+}
+
+.menu-item a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  background-image: linear-gradient(45deg, #093375, #c2e9fb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: 2px 2px 4px rgba(202, 193, 193, 0.6);
+}
+
+.menu-item a:hover {
+  background-color: #111;
+}
+
+.menu-item b {
+  padding: 14px 16px;
+  display: block;
+  font-weight: bold;
+  cursor: default; /* non-clickable */
+  /* Removed padding-right: 1000px to avoid layout breaking */
+}
