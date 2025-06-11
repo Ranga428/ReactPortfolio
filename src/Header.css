@@ -21,16 +21,19 @@
 ul.menu-list {
   list-style-type: none;
   margin: 0;
-  padding: 10;
-  overflow: hidden;
+  padding: 0; /* fixed from '10' */
+  width: 100%; /* ensures it spans full width */
   background-color: #282c34;
-  display: flex; /* flexbox for horizontal menu */
+  display: flex;
+  justify-content: space-between; /* evenly spread items */
 }
 
 .menu-item {
   /* removed float (not needed with flexbox) */
   /* add margin for spacing if needed */
-  margin-right: 150px; /* optional spacing between menu items */
+  display: flex;
+  justify-content: space-evenly;
+ 
 }
 
 .menu-item a {
@@ -40,7 +43,7 @@ ul.menu-list {
   padding: 14px 16px;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  background-image: linear-gradient(45deg, #093375, #c2e9fb);
+  background-image: linear-gradient(45deg, #1788bd, #c2e9fb);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -50,6 +53,7 @@ ul.menu-list {
 
 .menu-item a:hover {
   background-color: #111;
+  background-image: linear-gradient(45deg, #000000, #000000);
 }
 
 .menu-item b {
