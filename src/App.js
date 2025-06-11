@@ -21,13 +21,13 @@ function App() {
       }}
     >
       <div class="text-container">
-          <div class="text-item">Hello</div>
-          <div class="text-item">I'm Jenel</div>
-          <p class="sub-gradient-text">
-          <p> A computer engineer, I'm not just a problem-solver; </p>
-          <p> I'm an architect of innovation. I thrive on transforming </p>
-          <p> complex challenges into elegant, efficient digital solutions. </p>
-      </p>
+          <div class="text-main">Hello</div>
+          <div class="text-main">I'm Jenel</div>
+          <div class="sub-gradient-text">
+            <p> A computer engineer, I'm not just a problem-solver; </p>
+            <p> I'm an architect of innovation. I thrive on transforming </p>
+            <p> complex challenges into elegant, efficient digital solutions. </p>
+          </div>
       </div>
     </div>
   );
