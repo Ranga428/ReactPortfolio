@@ -11,7 +11,8 @@ function App() {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         paddingTop: '50px',
-        minHeight: '100vh',
+        maxHeight: '100%',
+        minHeight: '50%',
         width: '100%',   // Takes full width of its parent
         display: 'flex', // Example: for centering content over the image
         justifyContent: 'center',
