@@ -1,46 +1,39 @@
-/* App container with full screen background */
+/* Enhanced background style for professional look */
 .App {
-  height: 100vh;
-  width: 100%;
+  background-color: #0d1117; /* fallback color */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
 }
 
-.App1 {
-  height: 100vh;
-  width: 100%;
-  filter: blur(6px);
-  z-index: 0;
-  position: fixed; 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Dark overlay to enhance text readability */
+/* Dark translucent overlay for contrast and polish */
 .overlay {
-
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  display: grid;
-  justify-content: space-around;
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(30, 30, 30, 0.6));
+  display: flex;
+  justify-content: center;
   align-items: center;
   padding: 20px;
+  z-index: 1;
 }
+
 
 /* Text container styling */
 .text-container {
+  margin-right: 20%;
   animation: fade-in 2s ease-out;
   text-decoration: none;
   transition: transform 0.3s ease;
@@ -48,7 +41,8 @@
   color: inherit; 
   text-align: left;
   color: #fff;
-  max-width: 700px;
+  white-space: nowrap;
+  max-width: 750px;
   display: grid;
   font-size: 3rem;
   z-index: 1;
@@ -95,7 +89,7 @@
   background: linear-gradient(90deg, #ffffff, #d1d1d1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(45deg, #3e6172, #4884e4, #c2e9fb);
+  background-image: linear-gradient(45deg, #1788bd, #c2e9fb);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -121,6 +115,23 @@
   max-width: 800px;
   margin: 8px auto;
   padding: 0.5rem 2rem;
+  color: #f0f0f0;
+  background: rgba(15, 15, 15, 0.6); /* slightly deeper shade */
+  backdrop-filter: blur(4px); /* subtle internal blur for glass effect */
+  border-radius: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: justify;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlights .text-on-blur  {
+  animation: fade-in 2s ease-out;
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 6px auto;
+  padding: 1.5rem 2rem;
   color: #f0f0f0;
   background: rgba(15, 15, 15, 0.6); /* slightly deeper shade */
   backdrop-filter: blur(4px); /* subtle internal blur for glass effect */
