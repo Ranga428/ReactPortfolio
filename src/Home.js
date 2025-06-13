@@ -1,11 +1,13 @@
 import React from 'react';
 import Jenel2 from './Images/Jenel2.jpg'; // Import image
 import './App.css'; // Import CSS
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
     <div className="App" style={{ backgroundImage: `url(${Jenel2})` }}>
       <div className="overlay">
+        <Link to="/about" className="text-container">
         <div className="text-container">
           <div className="text-main">Hello</div>
           <div className="text-main">I'm Jenel</div>
@@ -15,6 +17,7 @@ function Home() {
             <p>complex challenges into elegant, efficient digital solutions.</p>
           </div>
         </div>
+        </Link>
       </div>
     </div>
   );
