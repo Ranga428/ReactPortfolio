@@ -41,6 +41,7 @@
 
 /* Text container styling */
 .text-container {
+  animation: fade-in 2s ease-out;
   text-decoration: none;
   transition: transform 0.3s ease;
   cursor: pointer;
@@ -51,6 +52,17 @@
   display: grid;
   font-size: 3rem;
   z-index: 1;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .text-container:hover {
@@ -103,6 +115,7 @@
 }
 
 .text-on-blur {
+  animation: fade-in 2s ease-out;
   position: relative;
   z-index: 1;
   max-width: 800px;
@@ -124,5 +137,17 @@
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
 }
 
+
+ul.highlights {
+  list-style-type: none;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.highlights:hover {
+  transform: scale(1.01)
+}
 
 

@@ -1,10 +1,12 @@
 import React from 'react';
-import './App.css'; // Import CSS
-import BG1 from './Images/BGarcade.jpg'; // Import image
+import './App.css';
+import BG1 from './Images/BGarcade.jpg'; 
+import { Link } from 'react-router-dom';
 
 function AboutMe() {
   return (
     <div className="App" style={{ backgroundImage: `url(${BG1})` }}>
+      <Link to="/Projects">
       <section className="text-on-blur">
         <h1>About Me</h1>
         <p>
@@ -24,6 +26,7 @@ function AboutMe() {
           fulfilling life with her, grounded in love, stability, and shared growth—both personally and professionally.
         </p>
       </section>
+      </Link>
     </div>
   );
 }
