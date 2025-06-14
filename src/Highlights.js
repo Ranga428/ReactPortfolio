@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './Highlights.css';
 import BG1 from './Images/BGarcade.jpg';
 import { Link } from 'react-router-dom';
 

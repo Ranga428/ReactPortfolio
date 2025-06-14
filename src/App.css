@@ -180,23 +180,6 @@ a {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.highlights .text-on-blur  {
-  animation: fade-in 2s ease-out;
-  position: relative;
-  z-index: 1;
-  max-width: 800px;
-  margin: 6px auto;
-  padding: 1.5rem 2rem;
-  color: #f0f0f0;
-  background: rgba(15, 15, 15, 0.6); /* slightly deeper shade */
-  backdrop-filter: blur(4px); /* subtle internal blur for glass effect */
-  border-radius: 12px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: justify;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
 /* Optional hover effect */
 .text-on-blur:hover {
   transform: scale(1.01);
@@ -204,51 +187,4 @@ a {
 }
 
 
-ul.highlights {
-  list-style-type: none;
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.highlights:hover {
-  transform: scale(1.01)
-}
-
-@media (max-width: 768px) {
-  ul.highlights {
-    padding: 0 1rem;
-    min-height: auto;
-  }
-
-  .highlights .text-on-blur {
-    padding: 1rem;
-    margin: 10px 0;
-    font-size: 0.95rem;
-  }
-
-  .text-on-blur {
-    padding: 0.8rem 1rem;
-    font-size: 0.95rem;
-    margin: 8px 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .highlights .text-on-blur {
-    padding: 0.7rem;
-    font-size: 0.9rem;
-    margin: 6px 0;
-  }
-
-  .text-on-blur {
-    padding: 0.7rem;
-    font-size: 0.9rem;
-  }
-
-  ul.highlights {
-    padding: 0 0.5rem;
-  }
-}
 

@@ -1,0 +1,68 @@
+/* Highlights container setup */
+ul.highlights {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* Controls vertical spacing between items */
+}
+
+.highlights .text-on-blur {
+  animation: fade-in 2s ease-out;
+  position: relative;
+  z-index: 1;
+  padding: 1.2rem 2rem;
+  color: #f0f0f0;
+  background: rgba(15, 15, 15, 0.6);
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: justify;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.highlights .text-on-blur:hover {
+  transform: scale(1.01);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* Fade-in animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  ul.highlights {
+    padding: 0 1rem;
+    gap: 3px;
+  }
+
+  .highlights .text-on-blur {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  ul.highlights {
+    padding: 0 0.5rem;
+    gap: 2px;
+  }
+
+  .highlights .text-on-blur {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+}
