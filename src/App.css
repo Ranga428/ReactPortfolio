@@ -1,6 +1,6 @@
-/* Enhanced background style for professional look */
+
 .App {
-  background-color: #0d1117; /* fallback color */
+  background-color: #0d1117; 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -15,7 +15,6 @@
   overflow: hidden;
 }
 
-/* Dark translucent overlay for contrast and polish */
 .overlay1 {
   position: absolute;
   top: 0;
@@ -29,8 +28,6 @@
   z-index: 1;
 }
 
-
-/* Text container styling */
 .text-container {
   padding-right: 300px;
   animation: fade-in 2s ease-out;
@@ -44,7 +41,7 @@
   display: grid;
   font-size: 3rem;
   z-index: 1;
-  white-space: normal; /* ✅ allow text wrapping */
+  white-space: normal;
 }
 
 @keyframes fade-in {
@@ -62,7 +59,6 @@
   transform: scale(1.01);
 }
 
-/* Main title text */
 .text-main {
   position: relative;
   z-index: 1;
@@ -78,7 +74,6 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-/* Sub text with slight gradient */
 .sub-gradient-text p {
   font-size: 1.5rem;
   font-weight: 500;
@@ -171,8 +166,8 @@ a {
   margin: 8px auto;
   padding: 0.5rem 2rem;
   color: #f0f0f0;
-  background: rgba(15, 15, 15, 0.6); /* slightly deeper shade */
-  backdrop-filter: blur(4px); /* subtle internal blur for glass effect */
+  background: rgba(15, 15, 15, 0.6);
+  backdrop-filter: blur(4px);
   border-radius: 12px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: justify;
@@ -180,7 +175,6 @@ a {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Optional hover effect */
 .text-on-blur:hover {
   transform: scale(1.01);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);

@@ -1,7 +1,7 @@
 .footer {
-  background-color: #1a1a1a; /* deep black-gray */
+  background-color: #1a1a1a;
   color: #ffffff;
-  padding: 20px 10px; /* fixed typo here */
+  padding: 20px 10px;
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.4);
@@ -34,7 +34,7 @@
 .footer-content p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #a0aec0; /* light gray text */
+  color: #a0aec0;
   margin: 10px 0 25px;
 }
 
@@ -53,7 +53,7 @@
 
 .social-links a {
   font-size: 1.1rem;
-  color: #63b3ed; /* sky blue */
+  color: #63b3ed;
   font-weight: 600;
   transition: transform 0.3s ease, color 0.3s ease;
   display: inline-block;
@@ -62,11 +62,10 @@
 .social-links a:hover,
 .social-links a:focus {
   transform: scale(1.1);
-  color: #f0e6ff; /* soft lavender accent */
+  color: #f0e6ff; 
   outline: none;
 }
 
-/* ✅ Responsive Footer Styling */
 @media (max-width: 600px) {
   .footer-content h2 {
     font-size: 1.5rem;

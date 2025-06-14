@@ -1,4 +1,4 @@
-/* Highlights container setup */
+
 ul.highlights {
   list-style-type: none;
   padding: 0;
@@ -6,7 +6,7 @@ ul.highlights {
   max-width: 800px;
   display: flex;
   flex-direction: column;
-  gap: 4px; /* Controls vertical spacing between items */
+  gap: 4px; 
 }
 
 .highlights .text-on-blur {
@@ -24,13 +24,11 @@ ul.highlights {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect */
 .highlights .text-on-blur:hover {
   transform: scale(1.01);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
 }
 
-/* Fade-in animation */
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -42,7 +40,6 @@ ul.highlights {
   }
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   ul.highlights {
     padding: 0 1rem;

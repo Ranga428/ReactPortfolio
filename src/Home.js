@@ -1,6 +1,6 @@
 import React from 'react';
-import Jenel2 from './Images/Jenel2.jpg'; // Import image
-import './App.css'; // Import CSS
+import Jenel2 from './Images/Jenel2.jpg';
+import './App.css';
 import { Link } from 'react-router-dom';
 
 function Home() {
