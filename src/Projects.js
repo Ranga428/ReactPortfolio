@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 function Projects() {
   return (
     <div className="App" style={{ backgroundImage: `url(${BG1})` }}>
+      <div className="overlay">
       <Link to="/Highlights">
       <section className="text-on-blur">
         <h1>Projects</h1>
@@ -27,6 +28,7 @@ function Projects() {
         </p>
       </section>
       </Link>
+      </div>
     </div>
   );
 }

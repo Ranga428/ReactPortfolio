@@ -108,6 +108,11 @@
   }
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .text-on-blur {
   animation: fade-in 2s ease-out;
   position: relative;

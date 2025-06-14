@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Header.css';
 
 function Header({ visible }) {
@@ -8,19 +8,44 @@ function Header({ visible }) {
       <nav className="header-menu" aria-label="Main navigation">
         <ul className="menu-list">
           <li className="menu-item">
-            <Link to="/">Jenel</Link>
+            <NavLink
+              to="/"
+              className={({ isActive }) => `menu-link${isActive ? ' active' : ''}`}
+            >
+              Jenel
+            </NavLink>
           </li>
           <li className="menu-item">
-            <Link to="/about">About Me</Link>
+            <NavLink
+              to="/about"
+              className={({ isActive }) => `menu-link${isActive ? ' active' : ''}`}
+            >
+              About Me
+            </NavLink>
           </li>
           <li className="menu-item">
-            <Link to="/projects">Projects</Link>
+            <NavLink
+              to="/projects"
+              className={({ isActive }) => `menu-link${isActive ? ' active' : ''}`}
+            >
+              Projects
+            </NavLink>
           </li>
           <li className="menu-item">
-            <Link to="/highlights">Highlights</Link>
+            <NavLink
+              to="/highlights"
+              className={({ isActive }) => `menu-link${isActive ? ' active' : ''}`}
+            >
+              Highlights
+            </NavLink>
           </li>
           <li className="menu-item">
-            <Link to="/contact">Contact</Link>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) => `menu-link${isActive ? ' active' : ''}`}
+            >
+              Contact
+            </NavLink>
           </li>
         </ul>
       </nav>

@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 function Contact() {
   return (
       <div className="App" style={{ backgroundImage: `url(${BG1})` }}>
+        <div className="overlay">
         <Link to="/">
         <section className="text-on-blur">
           <h1>Contact</h1>
@@ -16,6 +17,7 @@ function Contact() {
           </ul>
         </section>
         </Link>
+        </div>
       </div>
     );
 }
