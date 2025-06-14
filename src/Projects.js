@@ -1,31 +1,59 @@
 import React from 'react';
-import './App.css';
+import './Projects.css';
 import BG1 from './Images/BGarcade.jpg';
+import ECObin from './Images/ECObin.png';
 import { Link } from 'react-router-dom';
+
+function Subprojects({ items }) {
+  return (
+    <div className="subprojects-container">
+      {items.map((item, index) => (
+        <div className="subproject-card" key={index}>
+          <img src={item.image} alt={`Subproject ${index + 1}`} className="subproject-image" />
+          <h1 className="subproject-title">{item.title} </h1>
+          <p className="subproject-text">{item.text}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+const subprojectData = [
+  {
+    image: ECObin,
+    title: 'E.C.O Bin',
+    text: 'Smart Trash bin capable of sorting bio and non-biodegrable with the use of image recognition, machine learning and logically controlled motors.',
+  },
+  {
+    image: '/images/traffic-ai.jpg',
+    text: 'AI-based traffic management system that optimizes green light durations in real-time.',
+  },
+  {
+    image: '/images/water-monitoring.jpg',
+    text: 'IoT-based water quality monitoring network for city reservoirs and public fountains.',
+  },
+  {
+    image: '/images/waste-segregation.jpg',
+    text: 'Automated waste segregation system using image recognition and smart bins.',
+  },
+  {
+    image: '/images/emergency-app.jpg',
+    text: 'Mobile emergency alert system that connects citizens directly with local responders.',
+  },
+  {
+    image: '/images/green-buildings.jpg',
+    text: 'Monitoring system for energy consumption and CO2 levels in smart buildings.',
+  }
+];
+
 
 function Projects() {
   return (
     <div className="App" style={{ backgroundImage: `url(${BG1})` }}>
       <div className="overlay">
       <Link to="/Highlights">
-      <section className="text-on-blur">
-        <h1>Projects</h1>
-        <p>
-          I’m a motivated and disciplined 21-year-old Computer Engineering student currently in my third year, 
-          majoring in Cybersecurity. I was born on April 27, 2004, in Abha, Saudi Arabia. 
-          From a young age, I’ve been fascinated by technology—particularly networks, programming, 
-          and the ever-evolving world of cybersecurity. I am well-versed in foundational cybersecurity principles 
-          such as the CIA triad, as well as both offensive and defensive security strategies.
-          In addition to my technical skills, I bring strong leadership qualities. I take pride in 
-          leading my group projects effectively, ensuring that every team member contributes meaningfully based 
-          on their individual strengths. My experience in organizing academic activities and events 
-          has helped me develop a balanced mix of discipline, communication, and coordination skills.
-          Outside the academic world, I enjoy playing video games as both a creative outlet and a way to unwind. 
-          I’m also deeply passionate about pursuing a career in Security Operations Center (SOC) analysis, 
-          where I can apply my skills to real-world challenges and continue learning every day.
-          On a personal note, I have a loving girlfriend whom I adore deeply. I dream of building a happy, 
-          fulfilling life with her, grounded in love, stability, and shared growth—both personally and professionally.
-        </p>
+      <section className="text-on-blurProjects">
+          <Subprojects items={subprojectData} />
       </section>
       </Link>
       </div>

@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
+      if (window.scrollY > 5) {
         setShowHeader(true);
       } else {
         setShowHeader(false);

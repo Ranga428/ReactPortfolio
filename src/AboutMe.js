@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function AboutMe() {
   return (
     <div className="App" style={{ backgroundImage: `url(${BG1})` }}>
-      <div className="overlay">
+      <div className="overlay1">
       <Link to="/Projects">
       <section className="text-on-blur">
         <h1>About Me</h1>

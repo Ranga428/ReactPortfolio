@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function Highlights() {
   return (
     <div className="App" style={{ backgroundImage: `url(${BG1})` }}>
-    <div className="overlay">
+    <div className="overlay1">
       <Link to="/Contact">
       <ul className="highlights">
         <li>

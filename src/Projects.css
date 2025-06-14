@@ -1,0 +1,126 @@
+/* Base layout adjustments */
+.App {
+  background-color: #0d1117;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;   /* allow vertical expansion */
+  height: auto;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column; /* ensure stacked layout */
+  justify-content: flex-start; /* changed from center */
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;  /* optional: prevent horizontal scroll */
+}
+
+
+/* Overlay that allows internal scrolling */
+.overlay {
+  width: 100%;
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(30, 30, 30, 0.6));
+  backdrop-filter: blur(4px);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Subproject grid layout */
+.subprojects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem 1rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Each subproject card */
+.subproject-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.subproject-card:hover {
+  transform: scale(1.03);
+}
+
+/* Subproject image */
+.subproject-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+/* Subproject title (if used later) */
+.subproject-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #f2f2f2;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* Subproject description */
+.subproject-text {
+  font-size: 1rem;
+  color: #dddddd;
+  text-align: justify;
+  line-height: 1.6;
+  max-width: 100%;
+}
+
+/* Page title blur box */
+.text-on-blurProjects {
+  animation: fade-in 2s ease-out;
+  position: relative;
+  z-index: 1;
+  max-width: 11000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  color: #f0f0f0;
+  background: rgba(15, 15, 15, 0.6);
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  text-align: justify;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Smooth hover effect */
+.text-on-blurProjects:hover {
+  transform: scale(1.01);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive scaling */
+@media (max-width: 768px) {
+  .text-on-blurProjects {
+    padding: 1.2rem;
+  }
+
+  .subproject-text {
+    font-size: 0.95rem;
+  }
+
+  .subproject-image {
+    height: 160px;
+  }
+}

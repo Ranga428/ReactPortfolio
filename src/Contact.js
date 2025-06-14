@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function Contact() {
   return (
       <div className="App" style={{ backgroundImage: `url(${BG1})` }}>
-        <div className="overlay">
+        <div className="overlay1">
         <Link to="/">
         <section className="text-on-blur">
           <h1>Contact</h1>
