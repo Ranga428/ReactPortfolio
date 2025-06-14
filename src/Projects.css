@@ -124,3 +124,65 @@
     height: 160px;
   }
 }
+
+@media (max-width: 768px) {
+  .App {
+    padding: 0;
+    align-items: stretch;
+  }
+
+  .overlay {
+    padding: 3rem 1rem;
+  }
+
+  .text-on-blurProjects {
+    padding: 1rem;
+    margin: 1.5rem 1rem;
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .subprojects-container {
+    grid-template-columns: 1fr; /* Stack cards vertically on mobile */
+    padding: 1rem 0.5rem;
+    gap: 1.2rem;
+  }
+
+  .subproject-card {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .subproject-image {
+    height: 140px;
+  }
+
+  .subproject-title {
+    font-size: 1.2rem;
+  }
+
+  .subproject-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-on-blurProjects {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+
+  .subproject-image {
+    height: 120px;
+  }
+
+  .subproject-title {
+    font-size: 1rem;
+  }
+
+  .subproject-text {
+    font-size: 0.85rem;
+  }
+}
+

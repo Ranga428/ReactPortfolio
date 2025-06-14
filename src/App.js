@@ -5,7 +5,6 @@ import Home from './Home';
 import AboutMe from './AboutMe';
 import Projects from './Projects';
 import Highlights from './Highlights';
-import Contact from './Contact';
 
 function App() {
   const [showHeader, setShowHeader] = useState(false);
@@ -31,7 +30,6 @@ function App() {
         <Route path="/about" element={<AboutMe />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/highlights" element={<Highlights />} />
-        <Route path="/contact" element={<Contact />} />
       </Routes>
     </>
   );

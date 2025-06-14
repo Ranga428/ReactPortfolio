@@ -26,26 +26,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   z-index: 1;
 }
 
 
 /* Text container styling */
 .text-container {
-  margin-right: 20%;
+  padding-right: 300px;
   animation: fade-in 2s ease-out;
   text-decoration: none;
   transition: transform 0.3s ease;
   cursor: pointer;
-  color: inherit; 
+  color: inherit;
   text-align: left;
   color: #fff;
-  white-space: nowrap;
   max-width: 750px;
   display: grid;
   font-size: 3rem;
   z-index: 1;
+  white-space: normal; /* ✅ allow text wrapping */
 }
 
 @keyframes fade-in {
@@ -65,7 +64,7 @@
 
 /* Main title text */
 .text-main {
-  position: relative; 
+  position: relative;
   z-index: 1;
   font-size: 5rem;
   font-weight: 800;
@@ -73,7 +72,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(45deg, #1788bd, #c2e9fb);
-  -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
@@ -81,30 +79,79 @@
 }
 
 /* Sub text with slight gradient */
-.sub-gradient-text p{
+.sub-gradient-text p {
   font-size: 1.5rem;
-  font-weight: 5000;
+  font-weight: 500;
   line-height: 1.6;
   margin: 5px 0;
   background: linear-gradient(90deg, #ffffff, #d1d1d1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-image: linear-gradient(45deg, #1788bd, #c2e9fb);
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: transparent;
+  background-clip: text;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
 
-/* Responsive text sizing */
+/* Contact text */
+.contact-highlight {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  letter-spacing: 0.5px;
+  text-align: center;
+  cursor: pointer;
+  color: #ffffff;
+  background-image: linear-gradient(45deg, #e21111, #e4edf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 10px rgba(0, 114, 255, 0.5), 0 0 20px rgba(0, 114, 255, 0.3);
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.contact-highlight:hover {
+  transform: scale(1.03);
+  text-shadow: 0 0 15px rgba(0, 114, 255, 0.8);
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
+  .text-container {
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: left;
+    margin: 0 auto;
+  }
+
   .text-main {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+    text-align: left;
   }
 
   .sub-gradient-text p {
+    font-size: 1.0rem;
+    text-align: left;
+  }
+
+  .contact-highlight {
     font-size: 1rem;
+    padding: 0 10px;
+    display: inline-block;
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-main {
+    font-size: 2rem;
+  }
+
+  .sub-gradient-text p {
+    font-size: 0.95rem;
+  }
+
+  .contact-highlight {
+    font-size: 0.9rem;
   }
 }
 
@@ -112,6 +159,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+
+
 
 .text-on-blur {
   animation: fade-in 2s ease-out;
@@ -166,4 +216,39 @@ ul.highlights {
   transform: scale(1.01)
 }
 
+@media (max-width: 768px) {
+  ul.highlights {
+    padding: 0 1rem;
+    min-height: auto;
+  }
+
+  .highlights .text-on-blur {
+    padding: 1rem;
+    margin: 10px 0;
+    font-size: 0.95rem;
+  }
+
+  .text-on-blur {
+    padding: 0.8rem 1rem;
+    font-size: 0.95rem;
+    margin: 8px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .highlights .text-on-blur {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+    margin: 6px 0;
+  }
+
+  .text-on-blur {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  ul.highlights {
+    padding: 0 0.5rem;
+  }
+}
 

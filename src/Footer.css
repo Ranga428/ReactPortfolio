@@ -1,7 +1,7 @@
 .footer {
   background-color: #1a1a1a; /* deep black-gray */
   color: #ffffff;
-  padding: 20spx 10px;
+  padding: 20px 10px; /* fixed typo here */
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.4);
@@ -38,11 +38,7 @@
   margin: 10px 0 25px;
 }
 
-.footer a {
-  text-decoration: none;
-  color: inherit;
-}
-
+.footer a,
 .footer-content h2 a {
   text-decoration: none;
   color: inherit;
@@ -70,4 +66,24 @@
   outline: none;
 }
 
+/* ✅ Responsive Footer Styling */
+@media (max-width: 600px) {
+  .footer-content h2 {
+    font-size: 1.5rem;
+  }
 
+  .footer-content p {
+    font-size: 0.95rem;
+    margin: 8px 0 20px;
+  }
+
+  .social-links {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .social-links a {
+    font-size: 1rem;
+  }
+}

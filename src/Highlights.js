@@ -8,7 +8,7 @@ function Highlights() {
   return (
     <div className="App" style={{ backgroundImage: `url(${BG1})` }}>
     <div className="overlay1">
-      <Link to="/Contact">
+      <Link to="/">
       <ul className="highlights">
         <li>
             <section className="text-on-blur">
